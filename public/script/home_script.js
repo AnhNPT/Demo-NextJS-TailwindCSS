@@ -1,4 +1,3 @@
-alert(document)
 document.addEventListener('DOMContentLoaded', initFunction())
 
 function initFunction(){

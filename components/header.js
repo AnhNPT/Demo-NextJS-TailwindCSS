@@ -5,7 +5,7 @@ export default function headers(){
         <div className="container">
           <div className='flex flex-row justify-between items-center columns-1 md:columns-3'>
             <div className="logo">
-              <img src="/Logo.svg" alt='logo' />
+              <img src="/images/Logo.svg" alt='logo' />
             </div>
             <div className="menu flex flex-row columns-6 justify-between items-center d-none w-1/2">
               <a href="#"
