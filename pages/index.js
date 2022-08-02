@@ -1,10 +1,13 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <div>
-
+      <Head>
+        <title>Trang chủ</title>
+      </Head>
       {/* Header */}
       <Header />
 
@@ -25,7 +28,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-0
+
       {/* Welcome */}
       <div className="container h-full mt-100px mb-120px" id="welcomeSection">
         <div className="flex flex-row flex-wrap columns-1 h-full 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1">
