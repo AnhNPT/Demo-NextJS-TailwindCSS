@@ -1,6 +1,7 @@
 export default function Home() {
   return (
     <div>
+
       {/* Header */}
       <div className='font-lato bg-neutral-1 py-20px'>
         <div className="container">
@@ -201,6 +202,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }
