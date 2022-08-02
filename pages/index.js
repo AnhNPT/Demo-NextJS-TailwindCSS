@@ -1,14 +1,36 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Head from 'next/head';
+import React, {useCallback, useEffect} from 'react';
+
+let homeScript = () => {
+  var newContainer = document.querySelectorAll('.newCtn');
+  for (let i = 0; i < newContainer.length; i++) {
+    newContainer[i].addEventListener('mouseover', function () {
+      document.getElementById('title1').style = 'color: red';
+    })
+    newContainer[i].addEventListener('mouseout', function () {
+      document.getElementById('title1').style = 'color: #5168b5';
+    })
+  };
+  document.getElementById('scrollBtn').addEventListener('click', function () {
+    document.getElementById('welcomeSection').scrollIntoView({ behavior: 'smooth' });
+  })
+}
 
 export default function Home() {
+
+  useEffect(() => {
+    homeScript();
+  })
+
   return (
     <div>
 
       <Head>
-        <title>Trang chủ</title>
+        <title>Home</title>
       </Head>
 
       {/* Header */}
@@ -76,7 +98,7 @@ export default function Home() {
         <div className="flex flex-row w-full justify-start mt-60px 2xl:justify-end xl:justify-end lg:justify-end md:justify-start">
           <a href="" className="flex flex-row">
             <span className="block font-lato leading-28px text-18px font-medium text-neutral-2 mr-12px">View All Project</span>
-            <img src='/arrow-right.svg' alt="" />
+            <img src='/images/arrow-right.svg' alt="" />
           </a>
         </div>
       </div>
@@ -144,15 +166,13 @@ export default function Home() {
         <div className="flex flex-row w-full justify-start mt-60px 2xl:justify-end xl:justify-end lg:justify-end md:justify-start">
           <a href="" className="flex flex-row">
             <span className="block font-lato leading-28px text-18px font-medium text-neutral-2 mr-12px">View All Project</span>
-            <img src='/arrow-right.svg' alt="" />
+            <img src='/images/arrow-right.svg' alt="" />
           </a>
         </div>
       </div>
 
       {/* Footer */}
-      <Footer/>
-
-      <script src='./script/home_script.js' async />
+      <Footer />
 
     </div>
   )
