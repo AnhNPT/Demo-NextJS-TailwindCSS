@@ -1,32 +1,12 @@
+import Header from '../components/header';
+import Footer from '../components/footer';
+
 export default function Home() {
   return (
     <div>
 
       {/* Header */}
-      <div className='font-lato bg-neutral-1 py-20px'>
-        <div className="container">
-          <div className='flex flex-row justify-between items-center columns-1 md:columns-3'>
-            <div className="logo">
-              <img src="/Logo.svg" alt='logo' />
-            </div>
-            <div className="menu flex flex-row columns-6 justify-between items-center d-none w-1/2">
-              <a href="#"
-                className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">Home</a>
-              <a href="#"
-                className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">Service</a>
-              <a href="#"
-                className="text-neutral-6 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">Projects</a>
-              <a href="#"
-                className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">About</a>
-              <a href="#"
-                className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">News</a>
-              <a href="#"
-                className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out">Contact</a>
-            </div>
-            <div className="lang-btn text-neutral-6 cursor-pointer d-none">EN</div>
-          </div>
-        </div>
-      </div>
+      <Header />
 
       {/* Banner */}
       <div className="bg-[url('/Banner.png')] bg-cover bg-no-repeat">
@@ -45,7 +25,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+0
       {/* Welcome */}
       <div className="container h-full mt-100px mb-120px" id="welcomeSection">
         <div className="flex flex-row flex-wrap columns-1 h-full 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1">
@@ -164,45 +144,8 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="bg-neutral-1 mt-120">
-        <div className="container">
-          <div className="flex flex-row flex-wrap columns-3 pt-40px pb-40px ">
-            <div className="flex flex-col w-full 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-1/3">
-              <img src='/Logo.svg' className="w-140px" alt="" />
-              <div className="flex flex-row mt-38px">
-                <a className="mr-16px" href="#">
-                  <img src='/Social Icons-1.svg' alt="" />
-                </a>
-                <a className="mr-16px" href="#">
-                  <img src='/Social Icons-2.svg' alt="" />
-                </a>
-                <a className="mr-16px" href="#">
-                  <img src='/Social Icons-2.svg' alt="" />
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col w-full mt-26px 2xl:w-1/4 xl:w-1/4 lg:w-1/4 md:w-1/3 md:mt-26px">
-              <span
-                className="block font-playfair font-medium text-20px leading-24px text-neutral-6 w-fit border-b">Contact</span>
-              <span
-                className="block font-lato font-medium text-16px leading-24px text-neutral-6 mt-24px">+842473076655</span>
-              <span
-                className="block font-lato font-medium text-16px leading-24px text-neutral-6 mt-12px">office@hbharchitects.com</span>
-            </div>
-            <div className="flex flex-col w-full mt-26px 2xl:w-1/4 xl:w-1/4 lg:w-1/4 md:w-1/3 md:mt-26px">
-              <span
-                className="block font-playfair font-medium text-20px leading-24px text-neutral-6 w-fit border-b">Address</span>
-              <span className="block font-lato font-medium text-16px leading-24px text-neutral-6 mt-24px">8th Floor.
-                Block C- Central Point Building</span>
-              <span className="block font-lato font-medium text-16px leading-24px text-neutral-6 mt-12px">219 Trung
-                Kinh, Cau Giay, Ha Noi</span>
-            </div>
-            <span className="block mt-24px font-lato font-normal text-14px leading-24px text-neutral-5">Copyright © 2022
-              HBH Architects & Partners. All rights reserved</span>
-          </div>
-        </div>
-      </div>
-      
+      <Footer/>
+
     </div>
   )
 }
@@ -213,6 +156,9 @@ if (typeof window !== "undefined") {
   for (let i = 0; i < newContainer.length; i++) {
     newContainer[i].addEventListener('mouseover', function () {
       document.getElementById('title1').style = 'color: red';
+    })
+    newContainer[i].addEventListener('mouseout', function () {
+      document.getElementById('title1').style = 'color: #5168b5';
     })
   };
   document.getElementById('scrollBtn').addEventListener('click', function () {
