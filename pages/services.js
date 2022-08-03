@@ -4,9 +4,24 @@ import Footer from '../components/footer';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
 
+
+
 export default function Services() {
 
     useEffect(() => {
+        // import { tns } from '/node_modules/tiny-slider/src/tiny-slider.js';
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var countUp1 = new CountUp('count1', 7, { enableScrollSpy: true });
+            countUp1.start();
+            var countUp2 = new CountUp('count2', 100, { enableScrollSpy: true });
+            countUp2.start();
+            var countUp3 = new CountUp('count3', 30, { enableScrollSpy: true });
+            countUp3.start();
+            var countUp4 = new CountUp('count4', 3, { enableScrollSpy: true });
+            countUp4.start();
+        });
+
         var showBtn = document.getElementById('showMore-1');
         var btnText = document.getElementById('showHideText-1');
         var arrow1 = document.getElementById('arrow-1');
@@ -67,7 +82,8 @@ export default function Services() {
                         <div className="flex flex-col w-full ml-0 justify-center 2xl:w-1/2 2xl:ml-40px xl:w-1/2 xl:ml-40px lg:w-1/2 lg:ml-40px md:w-full md:ml-0">
                             <span className="block font-playfair text-60px text-primary-1 font-bold leading-80px mt-30px mb-24px 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-30px">Urban Planning</span>
                             <span className="font-lato leading-28px text-18px font-medium text-neutral-2">Eleifend eget pellentesque a
-                                amet scelerisque. Nec viverra molestie et cursus morbi eget. Amet bibendum suspendisse vestibulum
+                                amet scelerisque. Nec viverra molestie et cursus morbi eget.
+                                Amet bibendum suspendisse vestibulum
                                 amet dignissim in elementum. Vitae, ultrices enim commodo ut pretium feugiat tortor faucibus.
                                 <span className="block mt-12px">Vel, nisl, quis nibh eget pretium libero, tortor eleifend sit. Porttitor
                                     nunc, suspendisse non pharetra venenatis eu. Vulputate blandit morbi non mollis. Id pulvinar non

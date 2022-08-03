@@ -18,6 +18,18 @@
   all: unset;
 }
 
+.grid-col {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 0;
+}
+
+
+
 .btn-transition {
   transform: rotate(180deg);
 }

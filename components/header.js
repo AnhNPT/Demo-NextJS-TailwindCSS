@@ -21,7 +21,7 @@ export default function headers(){
               <Link href="#">
                 <a className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out" id='menu-3'>Projects</a>
               </Link>
-              <Link href="#">
+              <Link href="/about-us">
                 <a className="text-neutral-3 cursor-pointer hover:text-neutral-6 transition duration-200 ease-in-out" id='menu-4'>About</a>
               </Link>
               <Link href="#">
