@@ -393,6 +393,11 @@
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.24.1.tgz"
   "version" "3.24.1"
 
+"countup.js@^2.3.2":
+  "integrity" "sha512-dQ7F/CmKGjaO6cDfhtEXwsKVlXIpJ89dFs8PvkaZH9jBVJ2Z8GU4iwG/qP7MgY8qwr+1skbwR6qecWWQLUzB8Q=="
+  "resolved" "https://registry.npmjs.org/countup.js/-/countup.js-2.3.2.tgz"
+  "version" "2.3.2"
+
 "cross-spawn@^7.0.2":
   "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
   "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"

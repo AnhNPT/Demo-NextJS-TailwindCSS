@@ -1,40 +1,60 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 /* eslint-disable @next/next/no-img-element */
 import Header from '../components/header';
 import Footer from '../components/footer';
-import { useEffect, Component } from 'react';
-import Script from 'next/script';
-// import React, { Component } from 'react';
+import { useEffect } from 'react';
+
 
 
 export default function AboutUs() {
 
 
     useEffect(() => {
-        var slider = tns({
-            container: '.my-slider',
-            items: 6,
-            autoWidth: true,
-            autoplay: true,
-            center: true,
-            mouseDrag: true,
-            controls: false,
-            autoplayButtonOutput: false,
-            autoplayButtonOutput: false,
-            "speed": 500,
+
+        import('tiny-slider').then(({ tns }) => {
+            var slider = tns({
+                container: '.my-slider',
+                items: 6,
+                fixedWidth: 300,
+                autoplay: true,
+                center: true,
+                mouseDrag: true,
+                controls: false,
+                autoplayButtonOutput: false,
+                autoplayButtonOutput: false,
+                // rewind: true,
+                "speed": 500,
+            });
+            var sliders = tns({
+                container: '.my-slider-2',
+                items: 6,
+                // autoWidth: true,
+                fixedWidth: 300,
+                autoplay: true,
+                center: true,
+                mouseDrag: true,
+                controls: false,
+                autoplayButtonOutput: false,
+                autoplayButtonOutput: false,
+                // rewind: true,
+                "speed": 400,
+            });
         });
 
-        var sliders = tns({
-            container: '.my-slider-2',
-            items: 6,
-            autoWidth: true,
-            autoplay: true,
-            center: true,
-            mouseDrag: true,
-            controls: false,
-            autoplayButtonOutput: false,
-            autoplayButtonOutput: false,
-            "speed": 500,
+        import('countup.js').then(({ CountUp }) => {
+            var countUp1 = new CountUp('count1', 7, { enableScrollSpy: true });
+            var countUp2 = new CountUp('count2', 100, { enableScrollSpy: true });
+            var countUp3 = new CountUp('count3', 30, { enableScrollSpy: true });
+            var countUp4 = new CountUp('count4', 3, { enableScrollSpy: true });
         });
+
+        document.getElementById('achievement').addEventListener('scroll', () =>{
+            countUp1.start();
+            countUp2.start();
+            countUp3.start();
+            countUp4.start();
+        })
+
     })
 
     return (
@@ -110,7 +130,7 @@ export default function AboutUs() {
             </div>
 
             {/* Our achievement */}
-            <div className="mt-100px">
+            <div className="mt-100px" id='achievement'>
                 <div className="container">
                     <div className="flex flex-col flex-wrap text-center">
                         <span className="font-playfair text-primary-1 font-bold text-36px leading-52px">Our Achievement in
@@ -237,7 +257,7 @@ export default function AboutUs() {
                             <span className="block text-primary-1 mt-32px font-playfair font-bold leading-28px text-18px text-center 2xl:text-left 2xl:text-40px 2xl:leading-60px 2xl:font-bold 2xl:mt-0 xl:text-left xl:text-40px xl:leading-60px xl:font-bold xl:mt-0 lg:text-left lg:text-40px lg:leading-60px lg:font-bold lg:mt-0 md:text-center md:text-18px md:leading-28px md:font-bold md:mt-32px">Our job is to give you the best comfort there is to offer</span>
                             <span className="block text-primary-1 font-lato font-medium leading-24px text-16px mt-24px w-full 2xl:w-70p xl:w-70p lg:w-70p md:w-full">Neque suspendisse at id gravida. Nullam id etiam lacus rhoncus. Libero massa placerat nulla vulputate sed vestibulum et. Feugiat nec in enim, eu dictum nulla sapien augue et.</span>
                             <div className="flex flex-row justify-center 2xl:justify-start xl:justify-start lg:justify-start md:justify-center">
-                                <span className="inline-block mt-40px py-8px px-32px font-lato font-medium text-18px leading-28px bg-primary-1 text-neutral-6 text-center cursor-pointer">Download HBH Profile</span>
+                                <a href='' className="inline-block mt-40px py-8px px-32px font-lato font-medium text-18px leading-28px bg-primary-1 text-neutral-6 text-center cursor-pointer">Download HBH Profile</a>
                             </div>
                         </div>
                         <div className="w-full 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-full flex flex-row justify-center 2xl:justify-end xl:justify-end lg:justify-end md:justify-center ">
@@ -249,11 +269,6 @@ export default function AboutUs() {
 
             {/* Footer */}
             <Footer />
-
-            <Script type='module' src='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js' async></Script>
-            <Script type='module' id='slider-js'>
-            {`import { tns } from '../node_modules/tiny-slider/src/tiny-slider.js';`}
-            </Script>
         </div>
     )
 }
