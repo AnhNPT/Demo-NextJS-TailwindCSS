@@ -3,13 +3,14 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 
 
 
 export default function AboutUs() {
 
 
-    useEffect(() => {
+    useEffect( () => {
 
         import('tiny-slider').then(({ tns }) => {
             var slider = tns({

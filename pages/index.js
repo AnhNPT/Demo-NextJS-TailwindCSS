@@ -3,7 +3,7 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Head from 'next/head';
-import React, {useCallback, useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 let homeScript = () => {
   var newContainer = document.querySelectorAll('.newCtn');

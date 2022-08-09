@@ -19,7 +19,6 @@ module.exports = {
     colors: {
       primary: {
         1: '#0A2944'
-
       },
       secondary: {
         1: '#6C7D8C',
@@ -138,6 +137,9 @@ module.exports = {
       },
       boxShadow: {
         'custom': '-4px 8px 32px rgba(21, 28, 52, 0.12)'
+      },
+      backgroundImage:{
+        'projects': "url('/images/Rectangle-3.png')",
       },
     },
   },
